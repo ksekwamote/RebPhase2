@@ -5,7 +5,7 @@ const searchIndex=[
  {t:'Executive Team',d:'Paul Ramokgalo, Thatayaone Sesinyi',u:'about.html#leadership'},
  {t:'Testimonials',d:'What REB clients say',u:'about.html#testimonials'},
  {t:'Frequently Asked Questions',d:'Common risk management questions',u:'about.html#faq'},
- {t:'Projects',d:'REB proven track record: BPC, Botswana Oil, Ambatovy, Debswana',u:'projects.html'},
+ {t:'Projects',d:'REB proven track record: BPC, Premium Nickel, Botswana Oil, Ambatovy, Debswana',u:'projects.html'},
  {t:'Services',d:'Risk management and engineering services',u:'services.html'},
  {t:'Enterprise Risk Management',d:'ERM assessments, strategies and frameworks',u:'services.html#erm'},
  {t:'Business Continuity Management',d:'ERP, crisis communication, DRP and BCP',u:'services.html#bcm'},
@@ -24,7 +24,8 @@ const searchIndex=[
  {t:'Botswana Oil',d:'Business Continuity Management project',u:'projects.html#botswana-oil'},
  {t:'Botswana Power Corporation',d:'Strategic risk impact assessments',u:'projects.html#bpc'},
  {t:'Ambatovy Nickel & Cobalt Mine',d:'Risk engineering and insurance tender',u:'projects.html#ambatovy'},
- {t:'Debswana',d:'Orapa Cut 3 project risk management',u:'projects.html#debswana'}
+ {t:'Debswana',d:'Orapa Cut 3 project risk management',u:'projects.html#debswana'},
+ {t:'Premium Nickel Resources Botswana',d:'Risk-based plant and machinery valuation',u:'projects.html#premium-nickel'}
 ];
 function initNav(){const menu=document.querySelector('.menu-btn'),nav=document.querySelector('.main-nav');if(menu){menu.addEventListener('click',()=>{menu.classList.toggle('open');nav.classList.toggle('open')});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');nav.classList.remove('open')}))}}
 function initSearch(){document.querySelectorAll('.search-wrap').forEach(w=>{const i=w.querySelector('.site-search'),r=w.querySelector('.search-results');if(!i||!r)return;function render(){const q=i.value.trim().toLowerCase();if(q.length<2){r.classList.remove('open');r.innerHTML='';return}const hits=searchIndex.filter(x=>(x.t+' '+x.d).toLowerCase().includes(q)).slice(0,6);r.innerHTML=hits.length?hits.map(x=>`<a href="${x.u}"><strong>${x.t}</strong><span>${x.d}</span></a>`).join(''):'<a><strong>No results</strong><span>Try another search term.</span></a>';r.classList.add('open')}i.addEventListener('input',render);i.addEventListener('focus',render);document.addEventListener('click',e=>{if(!w.contains(e.target))r.classList.remove('open')});i.addEventListener('keydown',e=>{if(e.key==='Enter'){const a=r.querySelector('a[href]');if(a)location.href=a.href}})})}
