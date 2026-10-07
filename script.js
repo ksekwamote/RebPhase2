@@ -5,7 +5,7 @@ const searchIndex=[
  {t:'Executive Team',d:'Paul Ramokgalo, Thatayaone Sesinyi',u:'about.html#leadership'},
  {t:'Testimonials',d:'What REB clients say',u:'about.html#testimonials'},
  {t:'Frequently Asked Questions',d:'Common risk management questions',u:'about.html#faq'},
- {t:'Projects',d:'REB proven track record: BPC, Premium Nickel, Botswana Oil, Ambatovy, Debswana',u:'projects.html'},
+ {t:'Portfolio',d:'REB proven track record: BPC, Premium Nickel, Botswana Oil, Ambatovy, Debswana',u:'projects.html'},
  {t:'Services',d:'Risk management and engineering services',u:'services.html'},
  {t:'Enterprise Risk Management',d:'ERM assessments, strategies and frameworks',u:'services.html#erm'},
  {t:'Business Continuity Management',d:'ERP, crisis communication, DRP and BCP',u:'services.html#bcm'},
