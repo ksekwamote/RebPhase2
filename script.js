@@ -19,7 +19,7 @@ const searchIndex=[
  {t:'Tshepo Monare',d:'Electrical Engineer / Risk Consultant',u:'team.html#tshepo'},
  {t:'Sillas Molosiwa',d:'Mining Engineer / Risk Consultant',u:'team.html#sillas'},
  {t:'Chantal Moemedi',d:'Chemical Engineer / Risk Consultant',u:'team.html#chantal'},
- {t:'Resources',d:'Risk readiness checklist and mini risk assessment app',u:'resources.html'},
+ {t:'Resources',d:'Downloadable risk readiness checklist',u:'resources.html'},
  {t:'Contact',d:'Contact REB or request a risk assessment',u:'contact.html'},
  {t:'Botswana Oil',d:'Business Continuity Management project',u:'projects.html#botswana-oil'},
  {t:'Botswana Power Corporation',d:'Strategic risk impact assessments',u:'projects.html#bpc'},
@@ -56,15 +56,4 @@ function initContact(){
    .catch(()=>{status.textContent='Something went wrong sending your enquiry. Please email info@reb.co.bw directly.';status.className='form-status show error'});
  });
 }
-function initMiniApp(){
- const start=document.getElementById('miniAppStart');if(!start)return;
- const progressBar=document.getElementById('miniAppProgressBar');
- const question=document.getElementById('miniAppQuestion');
- start.addEventListener('click',()=>{
-  // UI shell only — REB's actual questions and scoring logic plug in here.
-  start.disabled=true;start.textContent='Assessment In Progress…';
-  progressBar.style.width='15%';
-  question.textContent='Question content and scoring logic to be supplied by REB.';
- });
-}
-document.addEventListener('DOMContentLoaded',()=>{initNav();initSearch();initFaq();initCarousel();initModals();initContact();initMiniApp();document.querySelectorAll('[data-year]').forEach(x=>x.textContent=new Date().getFullYear())});
+document.addEventListener('DOMContentLoaded',()=>{initNav();initSearch();initFaq();initCarousel();initModals();initContact();document.querySelectorAll('[data-year]').forEach(x=>x.textContent=new Date().getFullYear())});

@@ -4,8 +4,56 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Risk Engineers Botswana | Resources</title>
-    <meta name="description" content="Risk Engineers Botswana" />
+    <meta
+      name="description"
+      content="Download REB's free Risk Readiness Checklist and assess your organisation's risk exposure."
+    />
+    <link rel="canonical" href="https://reb.co.bw/resources.html" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="/images/favicon_io/site.webmanifest" />
+    <link rel="shortcut icon" href="/images/favicon_io/favicon.ico" type="image/x-icon" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Risk Engineers Botswana" />
+    <meta property="og:title" content="Risk Engineers Botswana | Resources" />
+    <meta
+      property="og:description"
+      content="Download REB's free Risk Readiness Checklist and assess your organisation's risk exposure."
+    />
+    <meta property="og:image" content="https://reb.co.bw/assets/logo-orange.jpg" />
+    <meta property="og:url" content="https://reb.co.bw/resources.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Risk Engineers Botswana | Resources" />
+    <meta
+      name="twitter:description"
+      content="Download REB's free Risk Readiness Checklist and assess your organisation's risk exposure."
+    />
+    <meta name="twitter:image" content="https://reb.co.bw/assets/logo-orange.jpg" />
+
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="resources.css" />
+    <noscript>
+      <style>
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
+
+    <!-- Google Analytics — replace G-XXXXXXXXXX with REB's GA4 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -55,58 +103,169 @@
             Built to make risk easier to recognise and act on.
           </h2>
           <p class="lead">
-            Two practical tools help organisations identify their own risk
-            exposure before they are ready to speak to someone directly.
+            Two tools built from REB's field survey work across Botswana's
+            mining, transport &amp; logistics, tourism and utilities sectors —
+            run the checklist with your team, or take the three-minute
+            self-assessment to see where you stand.
+          </p>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           APPLET 1 — RISK READINESS CHECKLIST
+           Content is rendered by resources.js from CHECKLIST_CONFIG at the
+           top of that file. Edit wording there, not here.
+           ===================================================================== -->
+      <section class="section applet-section" id="checklist-app" aria-labelledby="checklistHeading">
+        <div class="container">
+          <div class="applet-head">
+            <div>
+              <div class="eyebrow">01 / Resource</div>
+              <h2 class="display applet-title" id="checklistHeading">
+                Risk Readiness Checklist
+              </h2>
+              <p class="lead">
+                Fifteen checks across five categories, drawn from REB's site
+                survey methodology. Tick off what's already in place — items
+                tagged for your sector carry extra weight below.
+              </p>
+            </div>
+            <a class="pdf-link" href="assets/REB-Risk-Checklist.pdf" download>
+              Download PDF version
+            </a>
+          </div>
+
+          <div class="sector-select" id="sectorSelect" role="group" aria-label="Filter by sector"></div>
+
+          <div class="readiness-sticky" id="readinessSticky">
+            <div class="readiness-sticky-top">
+              <span class="readiness-label">Overall Readiness</span>
+              <span class="readiness-pct" id="readinessPct" data-val="0">0%</span>
+            </div>
+            <div class="readiness-bar">
+              <div class="readiness-fill" id="readinessFill"></div>
+            </div>
+          </div>
+
+          <div class="checklist-categories" id="checklistCategories"></div>
+
+          <div class="applet-results reveal" id="checklistResultsPanel">
+            <div class="results-band">
+              <span class="band-label" id="checklistBandLabel">—</span>
+              <p class="band-message" id="checklistBandMessage">
+                Tick off items above to see your readiness band.
+              </p>
+            </div>
+            <div class="where-to-start">
+              <h3>Where to start</h3>
+              <ol id="checklistWhereToStart"></ol>
+            </div>
+            <div class="cta-mount" id="checklistCtaMount"></div>
+          </div>
+
+          <button type="button" class="feedback-trigger" data-applet="Risk Readiness Checklist">
+            Give feedback on this tool
+          </button>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           APPLET 2 — RISK SELF-ASSESSMENT
+           Content is rendered by resources.js from QUIZ_CONFIG at the top of
+           that file. Edit wording there, not here.
+           ===================================================================== -->
+      <section class="section applet-section quiz-section" id="quiz-app" aria-labelledby="quizHeading">
+        <div class="container">
+          <div class="eyebrow">02 / Resource</div>
+          <h2 class="display applet-title" id="quizHeading">Risk Self-Assessment</h2>
+          <p class="lead">
+            Five questions on how your business currently manages risk.
+            Answer honestly — this isn't a test, it's a starting point for
+            the conversation with your risk advisor.
           </p>
 
-          <div class="resource-section" id="checklist">
-            <div class="checklist-card">
-              <h2>Risk Readiness Checklist</h2>
-              <p class="lead">
-                A downloadable self-audit for Botswana businesses.
-              </p>
-              <a class="btn btn-orange" href="assets/checklist.pdf" download
-                >Download Checklist</a
-              >
-              <div class="checklist-note">
-                Final checklist items to be inserted once approved by REB.
+          <div class="quiz-shell" id="quizShell">
+            <div class="quiz-progress">
+              <span id="quizProgressLabel">Question 1 of 5</span>
+              <div class="quiz-progress-bar">
+                <div class="quiz-progress-fill" id="quizProgressFill"></div>
               </div>
+            </div>
+            <div class="quiz-screen-wrap" id="quizScreens"></div>
+            <div class="quiz-nav">
+              <button type="button" class="btn btn-outline" id="quizBackBtn" disabled>
+                Back
+              </button>
+              <button type="button" class="btn btn-orange" id="quizNextBtn" disabled>
+                Next
+              </button>
             </div>
           </div>
 
-          <div class="resource-section" id="mini-app">
-            <div class="mini-app-card">
-              <h2>Risk Assessment Mini-App</h2>
-              <p class="lead">
-                A short browser-based assessment designed to produce a simple
-                personalised risk profile.
-              </p>
-              <div class="mini-app-shell">
-                <div class="mini-app-progress">
-                  <div
-                    class="mini-app-progress-bar"
-                    id="miniAppProgressBar"
-                  ></div>
-                </div>
-                <!-- REB question container: replace the placeholder text below with the real question set and render logic -->
-                <div class="mini-app-question" id="miniAppQuestion">
-                  Click "Start Assessment" to begin.
-                </div>
-                <!-- REB results panel: replace with the real scoring logic and personalised risk profile output -->
-                <div class="mini-app-results" id="miniAppResults"></div>
-                <button
-                  class="btn btn-orange mini-app-start"
-                  id="miniAppStart"
-                  type="button"
-                >
-                  Start Assessment
-                </button>
+          <div class="quiz-results reveal" id="quizResultsPanel" hidden>
+            <div class="score-ring-wrap">
+              <svg class="score-ring" viewBox="0 0 160 160" aria-hidden="true">
+                <circle class="ring-track" cx="80" cy="80" r="70" />
+                <circle class="ring-fill" id="quizRingFill" cx="80" cy="80" r="70" />
+              </svg>
+              <div class="score-ring-label">
+                <strong id="quizScoreNum" data-val="0">0%</strong>
+                <span id="quizBandLabel"></span>
               </div>
             </div>
+            <p class="band-message" id="quizBandMessage"></p>
+            <div class="quiz-priorities">
+              <h3>Your priorities</h3>
+              <ul id="quizPrioritiesList"></ul>
+            </div>
+            <div class="cta-mount" id="quizCtaMount"></div>
+            <button type="button" class="btn btn-outline quiz-retake" id="quizRetakeBtn">
+              Retake Assessment
+            </button>
           </div>
+
+          <button type="button" class="feedback-trigger" data-applet="Risk Self-Assessment">
+            Give feedback on this tool
+          </button>
         </div>
       </section>
     </main>
+
+    <!-- Shared feedback modal, used by both applets above -->
+    <div class="feedback-modal" id="feedbackModal" hidden>
+      <div class="feedback-modal-backdrop" id="feedbackBackdrop"></div>
+      <div class="feedback-modal-card" role="dialog" aria-modal="true" aria-labelledby="feedbackModalTitle">
+        <button type="button" class="feedback-close" id="feedbackClose" aria-label="Close feedback form">×</button>
+        <h3 id="feedbackModalTitle">Give feedback on this tool</h3>
+        <p class="feedback-sub" id="feedbackApplet"></p>
+        <form id="feedbackForm" novalidate>
+          <div class="rating-row" role="radiogroup" aria-label="Rate this tool from 1 to 5">
+            <button type="button" class="rate-btn" data-val="1" aria-pressed="false">1</button>
+            <button type="button" class="rate-btn" data-val="2" aria-pressed="false">2</button>
+            <button type="button" class="rate-btn" data-val="3" aria-pressed="false">3</button>
+            <button type="button" class="rate-btn" data-val="4" aria-pressed="false">4</button>
+            <button type="button" class="rate-btn" data-val="5" aria-pressed="false">5</button>
+          </div>
+          <label for="feedbackComment" class="visually-hidden">Comment</label>
+          <textarea
+            id="feedbackComment"
+            name="comment"
+            placeholder="What would make this tool more useful?"
+            required
+          ></textarea>
+          <label for="feedbackEmail" class="visually-hidden">Email (optional)</label>
+          <input id="feedbackEmail" type="email" name="email" placeholder="Email (optional)" />
+          <button type="submit" class="btn btn-orange">Send Feedback</button>
+          <div class="feedback-status" id="feedbackStatus" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Mobile-only sticky CTA bar, shown once a visitor starts either applet -->
+    <div class="mobile-cta-bar" id="mobileCtaBar">
+      <span>Ready for the next step?</span>
+      <a class="btn btn-orange" href="contact.html#contactForm">Book a Site Survey</a>
+    </div>
     <footer>
       <div class="container">
         <div class="footer-grid">
@@ -179,5 +338,6 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="resources.js" defer></script>
   </body>
 </html>

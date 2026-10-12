@@ -19,4 +19,4 @@ Implementation notes:
 - Homepage Proven Track Record uses Botswana Oil in place of Premium Nickel Resources Botswana; cards link through to projects.html.
 - projects.html is a dedicated Projects page (BPC, Botswana Oil, Ambatovy, Debswana) replacing Services in the main nav; services.html remains in the project but is no longer linked from the nav.
 - Contact form uses FormSubmit (AJAX) as a lightweight form-to-email endpoint with a honeypot field, inline validation and a success/error status message; one-time activation is required for info@reb.co.bw before production.
-- Resources page has a Risk Readiness Checklist (placeholder PDF, content pending REB approval) and a Risk Assessment Mini-App UI shell (no questions/scoring logic — marked with comments for REB to plug in).
+- Resources page offers the finalised Risk Readiness Checklist PDF for download (assets/REB-Risk-Checklist.pdf); the earlier Risk Assessment Mini-App placeholder has been removed.
